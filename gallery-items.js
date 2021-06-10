@@ -115,7 +115,6 @@ function onModalOpenClick(event) {
 }
 
 function onModalCloseClick() {
-  window.removeEventListener('keydown', onEscKeyPress);
   lightbox.classList.remove('is-open');
   lightBoxImg.src = '';
   lightBoxImg.alt = '';
