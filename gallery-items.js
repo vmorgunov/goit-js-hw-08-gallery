@@ -110,7 +110,7 @@ function openModal(event) {
   }
   const sourceEl = event.target.dataset.source;
   const altEl = event.target.alt;
-  window.addEventListener('keydown', onEscKeyPress, { once: true });
+  window.addEventListener('keydown', onEscKeyPress);
   lightbox.classList.add('is-open');
   replaceAttribute(sourceEl, altEl);
 }
