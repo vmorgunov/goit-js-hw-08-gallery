@@ -33,9 +33,9 @@ function addImagesMarkup(images) {
     .join('');
 }
 
-// Swipte function
+// Swipe function
 
-const incement = () => {
+const increment = () => {
   if (imgIndex === images.length - 1) return (imgIndex = 0);
   imgIndex++;
 };
@@ -47,7 +47,7 @@ const decremnt = () => {
 
 const onSwipe = event => {
   event.code === 'ArrowLeft' && decremnt();
-  event.code === 'ArrowRight' && incement();
+  event.code === 'ArrowRight' && increment();
   const { original, description } = images[imgIndex];
   replaceAttribute(original, description);
 };
