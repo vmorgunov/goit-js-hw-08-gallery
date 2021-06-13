@@ -40,13 +40,13 @@ const increment = () => {
   imgIndex++;
 };
 
-const decremnt = () => {
+const decrement = () => {
   if (imgIndex === 0) return (imgIndex = images.length - 1);
   imgIndex--;
 };
 
 const onSwipe = event => {
-  event.code === 'ArrowLeft' && decremnt();
+  event.code === 'ArrowLeft' && decrement();
   event.code === 'ArrowRight' && increment();
   const { original, description } = images[imgIndex];
   replaceAttribute(original, description);
